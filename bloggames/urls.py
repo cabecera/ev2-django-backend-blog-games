@@ -17,6 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from core import views as views_core
+from comunidad import views as views_comunidad
+from contacto import views as views_contacto
+from galeria import views as views_galeria
+from noticias import views as views_noticias
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views_core.index,name="index"),
+    path('comunidad/',views_comunidad.comunidad,name="comunidad"),
+    path('contacto/',views_contacto.contacto,name="contacto"),
+    path('galeria/',views_galeria.galeria,name="galeria"),
+    path('noticias/',views_noticias.noticias,name="noticias"),
 ]
