@@ -1,0 +1,77 @@
+<!-- El contenido de base.html se carga en index.html
+ Esto incluye el header, footer, etc. incluso los estilos de base.css
+ y components.css
+-->
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}GameBlog - Tu Blog de Videojuegos{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/pages/style_index.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>¡Bienvenido a GameBlog!</h1>
+        <p>Tu destino definitivo para las últimas noticias, reviews y contenido sobre videojuegos</p>
+        <div class="hero-buttons">
+            <a href="/gallery/" class="btn btn-primary">Ver Galería</a>
+            <a href="#" class="btn btn-secondary">Últimas Noticias</a>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2>¿Por qué elegir GameBlog?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Noticias Actualizadas</h3>
+                <p>Mantente al día con las últimas novedades del mundo gaming.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Reviews Profesionales</h3>
+                <p>Análisis detallados y honestos de juegos populares e indies.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Comunidad Activa</h3>
+                <p>Conecta con otros gamers y participa en discusiones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CAMBIAR A GALERIA DE JUEGOS -->
+<section class="featured-games">
+    <div class="container">
+        <h2>Juegos Destacados</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <h3>Apex Legends</h3>
+                <p>Battle Royale en primera persona con héroes únicos y habilidades especiales.</p>
+                <div class="game-rating">
+                </div>
+            </div>
+            <div class="game-card">
+                <h3>Hollow Knight: Silksong</h3>
+                <p>Metroidvania con exploración profunda, combate desafiante y gráficos estilizados.</p>
+                <div class="game-rating">
+                </div>
+            </div>
+            <div class="game-card">
+                <h3>Counter Strike 2</h3>
+                <p>Clásico shooter táctico en equipo, enfocado en precisión y estrategia.</p>
+                <div class="game-rating">
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group btn-ver-mas">
+            <a href="/gallery/" target="_blank" class="btn btn-sm btn-outline-secondary">Ver galeria de juegos</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

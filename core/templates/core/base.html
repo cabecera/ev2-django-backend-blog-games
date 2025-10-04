@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GameBlog{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/components.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">GameBlog</a>
+            <ul class="nav-menu roboto-light">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/gallery/">Galería</a></li>
+                <li class="nav-item"><a href="/noticias/">Noticias</a></li>
+                <li class="nav-item"><a href="/reviews/">Reviews</a></li>
+                <li class="nav-item"><a href="/comunidad/">Comunidad</a></li>
+                <li class="nav-item"><a href="/contacto/">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL QUE CAMBIA CON DJANGO TEMPLATES -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>GameBlog</h3>
+                <p>Tu destino número uno para las últimas noticias, reviews y contenido sobre videojuegos.</p>
+                <div class="social-links">
+                    <a href="#" title="Twitter">T</a>
+                    <a href="#" title="Facebook">F</a>
+                    <a href="#" title="Instagram">I</a>
+                    <a href="#" title="YouTube">Y</a>
+                    <a href="#" title="Twitch">T</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="/">Inicio</a></p>
+                <p><a href="/gallery/">Galería</a></p>
+                <p><a href="/noticias/">Noticias</a></p>
+                <p><a href="/reviews/">Reviews</a></p>
+                <p><a href="/comunidad/">Comunidad</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <p><a href="#">PC Gaming</a></p>
+                <p><a href="#">Consolas</a></p>
+                <p><a href="#">Mobile Gaming</a></p>
+                <p><a href="#">eSports</a></p>
+                <p><a href="#">Indie Games</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>ci.becerrad@outlook.cl</p>
+                <p>guido.lezano@inacapmail.cl</p>
+                <p>+56961234548</p>
+                <p>Concepción, Chile</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 GameBlog. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

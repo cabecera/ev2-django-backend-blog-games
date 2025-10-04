@@ -1,0 +1,149 @@
+/* ===== BOTONES ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #e60012;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #cc0000;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #e60012;
+    border-color: #e60012;
+}
+
+.btn-secondary:hover {
+    background: #e60012;
+    color: #ffffff;
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    color: #666666;
+    border-color: #666666;
+}
+
+.btn-outline-secondary:hover {
+    background: #666666;
+    color: #ffffff;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* ===== CARDS ===== */
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    color: #e60012;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666666;
+}
+
+.game-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.game-card h3 {
+    color: #e60012;
+    margin-bottom: 15px;
+}
+
+.game-card p {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* ===== GRIDS ===== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* ===== FORMULARIOS (para futuros formularios) ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #e60012;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.2s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #e60012;
+}

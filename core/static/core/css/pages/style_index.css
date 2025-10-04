@@ -1,0 +1,67 @@
+/* ===== ESTILOS ESPECÍFICOS DE LA PÁGINA DE INICIO ===== */
+
+/* Hero Section */
+.hero-section {
+    background: #f8f8f8;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-content h1 {
+    color: #e60012;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666666;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+    background: #ffffff;
+    margin-bottom: 60px;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e60012;
+}
+
+/* Featured Games */
+.featured-games {
+    padding: 60px 0;
+    background: #f8f8f8;
+    margin-bottom: 60px;
+}
+
+.featured-games h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e60012;
+}
+
+.game-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.featured-games .container .btn-group.btn-ver-mas {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}

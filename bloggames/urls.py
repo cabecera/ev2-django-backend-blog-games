@@ -26,9 +26,9 @@ from noticias import views as views_noticias
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views_core.index,name="index"),
-    path('comunidad/',views_comunidad.comunidad,name="comunidad"),
-    path('contacto/',views_contacto.contacto,name="contacto"),
-    path('galeria/',views_galeria.galeria,name="galeria"),
-    path('noticias/',views_noticias.noticias,name="noticias"),
+    path('',views_core.home,name="index"),
+    # path('comunidad/',views_comunidad.comunidad,name="comunidad"),
+    # path('contacto/',views_contacto.contacto,name="contacto"),
+    # path('galeria/',views_galeria.galeria,name="galeria"),
+    # path('noticias/',views_noticias.noticias,name="noticias"),
 ]
