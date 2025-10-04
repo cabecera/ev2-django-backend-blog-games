@@ -30,5 +30,5 @@ urlpatterns = [
     # path('comunidad/',views_comunidad.comunidad,name="comunidad"),
     # path('contacto/',views_contacto.contacto,name="contacto"),
     # path('galeria/',views_galeria.galeria,name="galeria"),
-    # path('noticias/',views_noticias.noticias,name="noticias"),
+    path('noticias/',views_noticias.noticias,name="noticias"),
 ]

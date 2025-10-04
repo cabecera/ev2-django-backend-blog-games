@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Noticias — BlogGames{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'noticias/css/noticias.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="noticias-container">
+  <div class="noticias-header">
+    <h1>Últimas Noticias</h1>
+  </div>
+
+  {% if noticias %}
+    <ul class="noticias-list">
+      {% for n in noticias %}
+        <li class="noticia-item">
+          <h2 class="noticia-titulo">{{ n.titulo }}</h2>
+          <p class="noticia-descripcion">{{ n.descripcion }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <div class="no-noticias">
+      <p>No hay noticias aún.</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

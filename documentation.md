@@ -67,3 +67,5 @@ Luego carga index.css, que puede agregar o sobrescribir estilos específicos par
   <h2 class="home-title">Últimas noticias</h2>
   <p>Bienvenido al blog de videojuegos más completo.</p>
 </body>
+
+

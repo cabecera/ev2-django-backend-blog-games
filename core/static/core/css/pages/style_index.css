@@ -10,11 +10,13 @@
 
 .hero-content h1 {
     color: #e60012;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 30px;
     color: #666666;
 }
@@ -37,6 +39,7 @@
     text-align: center;
     margin-bottom: 40px;
     color: #e60012;
+    font-family: "Roboto", sans-serif;
 }
 
 /* Featured Games */
@@ -50,6 +53,7 @@
     text-align: center;
     margin-bottom: 40px;
     color: #e60012;
+    font-family: "Roboto", sans-serif;
 }
 
 .game-rating {

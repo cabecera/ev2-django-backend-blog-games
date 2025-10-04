@@ -16,35 +16,78 @@ body {
 }
 
 /* ===== FUENTES ===== */
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
 .roboto-light {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
 }
 
 /* ===== TIPOGRAFÍA GENERAL ===== */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     color: #333333;
+    font-family: "Roboto", sans-serif;
 }
 
 h1 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 h3 {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 p {
     margin-bottom: 1rem;
     color: #666666;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
 /* ===== LAYOUT GENERAL ===== */
