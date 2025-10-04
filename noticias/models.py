@@ -4,6 +4,7 @@ from django.db import models
 class Noticia(models.Model):
     titulo = models.CharField(max_length=200)
     descripcion = models.TextField()
+    fecha_publicacion = models.DateTimeField(auto_now_add=True)
 
 #El método __str__ sirve para que el admin muestre el título en lugar de “Noticia object”.
     def __str__(self):

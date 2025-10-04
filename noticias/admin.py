@@ -6,3 +6,7 @@ from .models import Noticia
 
 # Register your models here.
 admin.site.register(Noticia)
+
+class NoticiaAdmin(admin.ModelAdmin):
+    list_display = ('titulo','descripcion', 'fecha_publicacion')
+    search_fields = ('titulo')

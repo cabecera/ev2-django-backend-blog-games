@@ -19,6 +19,7 @@
         <li class="noticia-item">
           <h2 class="noticia-titulo">{{ n.titulo }}</h2>
           <p class="noticia-descripcion">{{ n.descripcion }}</p>
+          <div class="noticia-fecha">{{ n.fecha_publicacion|date:"d/m/Y H:i" }} CLT</div>
         </li>
       {% endfor %}
     </ul>
