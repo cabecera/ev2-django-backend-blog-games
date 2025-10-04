@@ -1,11 +1,14 @@
+# noticias/models.py - TU NUEVO MODELO
 from django.db import models
 
-# Create your models here.
 class Noticia(models.Model):
-    titulo = models.CharField(max_length=200)
-    descripcion = models.TextField()
-    fecha_publicacion = models.DateTimeField(auto_now_add=True)
+    titulo = models.CharField(max_length=100)
+    detalle = models.TextField()
+    autor = models.CharField(max_length=100)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
-#El método __str__ sirve para que el admin muestre el título en lugar de “Noticia object”.
     def __str__(self):
         return self.titulo
+    # El método str sirve para que el admin muestre el título en lugar de “Noticia object”.
+

@@ -1,12 +1,9 @@
 from django.contrib import admin
-
-#Ahora se pueden crear noticias desde el panel admin.
 from .models import Noticia
 
+class ProjectAdmin(admin.ModelAdmin):
+    readonly_fields=('created','updated')
 
-# Register your models here.
-admin.site.register(Noticia)
 
-class NoticiaAdmin(admin.ModelAdmin):
-    list_display = ('titulo','descripcion', 'fecha_publicacion')
-    search_fields = ('titulo')
+admin.site.register(Noticia,ProjectAdmin)
+
