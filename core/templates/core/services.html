@@ -1,0 +1,93 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Lo que Ofrecemos - GameHub{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/pages/sections.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Lo que Ofrecemos</h1>
+        <p>Descubre todos los servicios que GameHub tiene para ti</p>
+    </div>
+</section>
+
+<!-- SERVICES CONTENT -->
+<section class="services-content">
+    <div class="container">
+        <div class="services-grid">
+            <!-- NOTICIAS GAMING -->
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h2>Noticias Gaming</h2>
+                <p>Cobertura en tiempo real de lanzamientos, actualizaciones y eventos del mundo de los videojuegos.</p>
+                <ul class="service-features">
+                    <li>Lanzamientos de juegos</li>
+                    <li>Actualizaciones y parches</li>
+                    <li>Eventos y conferencias</li>
+                    <li>Noticias de la industria</li>
+                </ul>
+                <a href="/noticias/" class="btn btn-primary">Ver Noticias</a>
+            </div>
+
+            <!-- REVIEWS Y ANÁLISIS -->
+            <div class="service-card">
+                <h2>Reviews y Análisis</h2>
+                <p>Análisis profundos de los últimos juegos con puntuaciones transparentes y secciones de pros/contras.</p>
+                <ul class="service-features">
+                    <li>Reviews detalladas</li>
+                    <li>Sistema de puntuación claro</li>
+                    <li>Análisis de gameplay</li>
+                    <li>Comparativas entre juegos</li>
+                </ul>
+                <a href="/reviews/" class="btn btn-primary">Ver Reviews</a>
+            </div>
+
+            <!-- GALERÍA DE GAMEPLAY -->
+            <div class="service-card">
+                <h2>Galería de Gameplay</h2>
+                <p>Capturas y videos exclusivos de gameplay para que veas los juegos en acción antes de comprar.</p>
+                <ul class="service-features">
+                    <li>Screenshots en alta calidad</li>
+                    <li>Videos de gameplay</li>
+                    <li>Galería organizada por género</li>
+                    <li>Contenido exclusivo</li>
+                </ul>
+                <a href="/galeria/" class="btn btn-primary">Ver Galería</a>
+            </div>
+
+            <!-- COMUNIDAD ACTIVA -->
+            <div class="service-card">
+                <h2>Comunidad Activa</h2>
+                <p>Foros y espacios de discusión donde puedes compartir tus experiencias y conectar con otros gamers.</p>
+                <ul class="service-features">
+                    <li>Foros de discusión</li>
+                    <li>Comunidad inclusiva</li>
+                    <li>Eventos comunitarios</li>
+                    <li>Redes sociales activas</li>
+                </ul>
+                <a href="/comunidad/" class="btn btn-primary">Unirse a la Comunidad</a>
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="services-cta">
+            <h2>¿Listo para Comenzar?</h2>
+            <p>Explora todo lo que GameHub tiene para ofrecerte</p>
+            <div class="cta-buttons">
+                <a href="/" class="btn btn-primary">Ir al Inicio</a>
+                <a href="/contact/" class="btn btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

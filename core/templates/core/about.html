@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}¿Quiénes Somos? - GameHub{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/pages/sections.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>¿Quiénes Somos?</h1>
+        <p>Conoce al equipo detrás de GameHub y nuestra pasión por los videojuegos</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="about-content">
+    <div class="container">
+        <div class="about-grid">
+            <!-- NUESTRA HISTORIA -->
+            <div class="about-card">
+                <h2>Nuestra Historia</h2>
+                <p>Somos un equipo de gamers apasionados que comenzó en 2023 con el objetivo de centralizar toda la información del mundo gaming en un solo lugar.</p>
+                <p>Nacimos de la necesidad de tener una plataforma confiable donde los jugadores pudieran encontrar reviews honestas, noticias actualizadas y una comunidad inclusiva.</p>
+            </div>
+
+            <!-- NUESTROS VALORES -->
+            <div class="about-card">
+                <h2>Nuestros Valores</h2>
+                <div class="values-list">
+                    <div class="value-item">
+                        <span class="value-icon"></span>
+                        <div class="value-content">
+                            <h3>Reviews 100% Imparciales</h3>
+                            <p>Nuestras reseñas son completamente honestas y sin influencias externas.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon"></span>
+                        <div class="value-content">
+                            <h3>Información Verificada</h3>
+                            <p>Verificamos cada dato antes de publicarlo para garantizar precisión.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon"></span>
+                        <div class="value-content">
+                            <h3>Comunidad Inclusiva</h3>
+                            <p>Todos los gamers son bienvenidos, sin importar su nivel de experiencia.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon"></span>
+                        <div class="value-content">
+                            <h3>Contenido Actualizado</h3>
+                            <p>Publicamos contenido fresco diariamente para mantenerte al día.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NUESTRA MISIÓN -->
+            <div class="about-card">
+                <h2>Nuestra Misión</h2>
+                <p>Crear el hub definitivo para la comunidad gaming hispanohablante, donde cada jugador pueda encontrar la información que necesita, desde reviews detalladas hasta las últimas noticias del sector.</p>
+                <p>Creemos que los videojuegos son más que entretenimiento: son arte, cultura y una forma de conectar personas de todo el mundo.</p>
+            </div>
+
+
+            </div>
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="about-cta">
+            <h2>¿Quieres Ser Parte de Nuestra Comunidad?</h2>
+            <p>Únete a miles de gamers que ya confían en GameHub</p>
+            <div class="cta-buttons">
+                <a href="/services/" class="btn btn-primary">Conoce Nuestros Servicios</a>
+                <a href="/contact/" class="btn btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

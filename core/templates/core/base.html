@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}GameBlog{% endblock %}</title>
+    <title>{% block title %}GameHub{% endblock %}</title>
     {% load static %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +20,16 @@
     <!-- BARRA DE NAVEGACIÓN -->
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo">GameBlog</a>
+            <a href="/" class="logo">GameHub</a>
             <ul class="nav-menu roboto-light">
                 <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/about/">¿Quiénes Somos?</a></li>
+                <li class="nav-item"><a href="/services/">Servicios</a></li>
                 <li class="nav-item"><a href="/galeria/">Galería</a></li>
                 <li class="nav-item"><a href="/noticias/">Noticias</a></li>
                 <li class="nav-item"><a href="/reviews/">Reviews</a></li>
                 <li class="nav-item"><a href="/comunidad/">Comunidad</a></li>
-                <li class="nav-item"><a href="/contacto/">Contacto</a></li>
+                <li class="nav-item"><a href="/contact/">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +44,7 @@
         <div class="footer-content">
 
             <div class="footer-section">
-                <h3>GameBlog</h3>
+                <h3>GameHub</h3>
                 <p>Tu destino número uno para las últimas noticias, reviews y contenido sobre videojuegos.</p>
                 <div class="social-links">
                     <a href="#" title="Twitter">T</a>
@@ -56,10 +58,12 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <p><a href="/">Inicio</a></p>
+                <p><a href="/about/">¿Quiénes Somos?</a></p>
+                <p><a href="/services/">Servicios</a></p>
                 <p><a href="/galeria/">Galería</a></p>
                 <p><a href="/noticias/">Noticias</a></p>
                 <p><a href="/reviews/">Reviews</a></p>
-                <p><a href="/comunidad/">Comunidad</a></p>
+                <p><a href="/contact/">Contacto</a></p>
             </div>
 
             <div class="footer-section">
@@ -81,7 +85,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024 GameBlog. Todos los derechos reservados.</p>
+            <p>&copy; 2024 GameHub. Todos los derechos reservados.</p>
         </div>
     </footer>
 

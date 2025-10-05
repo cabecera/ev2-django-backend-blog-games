@@ -1,0 +1,447 @@
+/* ====================================
+   SECCIONES SIMPLES - CSS BÁSICO
+   ==================================== */
+
+/* Variables básicas */
+:root {
+    --primary-color: #ecb8bc;
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+    --border-color: #ddd;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color:#333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color:#333;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* SECCIONES GENERALES */
+.featured-section,
+.news-section,
+.reviews-section,
+.trending-section {
+    padding: 3rem 0;
+    background: white;
+}
+
+.news-section {
+    background: var(--bg-light);
+}
+
+.featured-section h2,
+.news-section h2,
+.reviews-section h2,
+.trending-section h2 {
+    text-align: center;
+    color:#333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* GRIDS SIMPLES */
+.featured-grid,
+.news-grid,
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* TARJETAS BÁSICAS */
+.featured-card,
+.news-card,
+.review-card {
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.news-card {
+    background: var(--bg-light);
+}
+
+.featured-card h3,
+.news-card h3,
+.review-card h3 {
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+.featured-card p,
+.news-card p,
+.review-card p {
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+/* RATING SIMPLE */
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* LISTA TRENDING */
+.trending-list {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}
+
+.rank {
+    background: var(--primary-color);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.game-name {
+    flex: 1;
+    font-weight: 600;
+}
+
+.category {
+    background: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* CTA SECTION */
+.cta-section {
+    padding: 3rem 0;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ====================================
+   ESTILOS PARA ABOUT, SERVICES Y CONTACT
+   ==================================== */
+
+/* ABOUT PAGE */
+.about-content {
+    padding: 3rem 0;
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.about-card h2 {
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.value-icon {
+    font-size: 1.2rem;
+}
+
+.value-content h3 {
+    color:#333;
+    margin-bottom: 0.5rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.member-avatar {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+/* SERVICES PAGE */
+.services-content {
+    padding: 3rem 0;
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h2 {
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.service-features li {
+    padding: 0.25rem 0;
+    color: var(--text-color);
+}
+
+.why-choose-us {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.why-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.services-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+/* CONTACT PAGE */
+.contact-content {
+    padding: 3rem 0;
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.contact-card h2 {
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+.contact-info,
+.social-links,
+.collaboration-types,
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item,
+.social-item,
+.collab-item,
+.location-item {
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.contact-item strong,
+.social-item strong,
+.collab-item h3,
+.location-item strong {
+    color:#333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+.faq-section {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.faq-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+/* RESPONSIVE SIMPLE */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-grid,
+    .news-grid,
+    .reviews-grid,
+    .about-grid,
+    .services-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,76 +1,139 @@
-<!-- El contenido de base.html se carga en index.html
- Esto incluye el header, footer, etc. incluso los estilos de base.css
- y components.css
--->
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}GameBlog - Tu Blog de Videojuegos{% endblock %}
+{% block title %}GameHub - Tu Hub de Videojuegos{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'core/css/pages/style_index.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/pages/sections.css' %}">
 {% endblock %}
 
-
 {% block content %}
+<!-- HERO SECTION -->
 <section class="hero-section">
     <div class="hero-content">
-        <h1>¡Bienvenido a GameBlog!</h1>
+        <h1>Bienvenido a GameHub</h1>
         <p>Tu destino definitivo para las últimas noticias, reviews y contenido sobre videojuegos</p>
         <div class="hero-buttons">
-            <a href="/gallery/" class="btn btn-primary">Ver Galería</a>
-            <a href="#" class="btn btn-secondary">Últimas Noticias</a>
+            <a href="/galeria/" class="btn btn-primary">Ver Galería</a>
+            <a href="/noticias/" class="btn btn-secondary">Últimas Noticias</a>
+            <a href="/about/" class="btn btn-outline">Conócenos</a>
         </div>
     </div>
 </section>
 
-<section class="features-section">
+<!-- DESTACADO DEL MES -->
+<section class="featured-section">
     <div class="container">
-        <h2>¿Por qué elegir GameBlog?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Noticias Actualizadas</h3>
-                <p>Mantente al día con las últimas novedades del mundo gaming.</p>
+        <h2>Destacado del Mes</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <h3>Elden Ring</h3>
+                <p>El RPG de mundo abierto que está revolucionando el género.</p>
+                <a href="/galeria/" class="btn btn-primary">Ver Detalles</a>
             </div>
-            <div class="feature-card">
-                <h3>Reviews Profesionales</h3>
-                <p>Análisis detallados y honestos de juegos populares e indies.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Comunidad Activa</h3>
-                <p>Conecta con otros gamers y participa en discusiones.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CAMBIAR A GALERIA DE JUEGOS -->
-<section class="featured-games">
-    <div class="container">
-        <h2>Juegos Destacados</h2>
-        <div class="games-grid">
-            <div class="game-card">
-                <h3>Apex Legends</h3>
-                <p>Battle Royale en primera persona con héroes únicos y habilidades especiales.</p>
-                <div class="game-rating">
-                </div>
-            </div>
-            <div class="game-card">
+            <div class="featured-card">
                 <h3>Hollow Knight: Silksong</h3>
-                <p>Metroidvania con exploración profunda, combate desafiante y gráficos estilizados.</p>
-                <div class="game-rating">
-                </div>
-            </div>
-            <div class="game-card">
-                <h3>Counter Strike 2</h3>
-                <p>Clásico shooter táctico en equipo, enfocado en precisión y estrategia.</p>
-                <div class="game-rating">
-                </div>
+                <p>La esperada secuela del indie más aclamado.</p>
+                <a href="/galeria/" class="btn btn-primary">Ver Detalles</a>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="btn-group btn-ver-mas">
-            <a href="/gallery/" target="_blank" class="btn btn-sm btn-outline-secondary">Ver galeria de juegos</a>
+<!-- ÚLTIMAS NOTICIAS -->
+<section class="news-section">
+    <div class="container">
+        <h2>Últimas Noticias</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>Nuevo Lanzamiento</h3>
+                <p>Descubre los últimos juegos que han llegado al mercado.</p>
+                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+            </div>
+            <div class="news-card">
+                <h3>Actualizaciones Gaming</h3>
+                <p>Mantente al día con las últimas actualizaciones de tus juegos favoritos.</p>
+                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+            </div>
+            <div class="news-card">
+                <h3>Eventos Esports</h3>
+                <p>Cobertura completa de torneos y competiciones gaming.</p>
+                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS RECIENTES -->
+<section class="reviews-section">
+    <div class="container">
+        <h2>Reviews Recientes</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <h3>Apex Legends</h3>
+                <p>Análisis completo del battle royale más popular.</p>
+                <div class="rating">★★★★☆</div>
+                <a href="/reviews/" class="btn btn-outline">Ver Review</a>
+            </div>
+            <div class="review-card">
+                <h3>Counter Strike 2</h3>
+                <p>Revisión del shooter táctico clásico renovado.</p>
+                <div class="rating">★★★★★</div>
+                <a href="/reviews/" class="btn btn-outline">Ver Review</a>
+            </div>
+            <div class="review-card">
+                <h3>CupHead</h3>
+                <p>El indie que conquistó el mundo con su estilo único.</p>
+                <div class="rating">★★★★☆</div>
+                <a href="/reviews/" class="btn btn-outline">Ver Review</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JUEGOS DEL MOMENTO -->
+<section class="trending-section">
+    <div class="container">
+        <h2>Juegos del Momento</h2>
+        <div class="trending-list">
+            <div class="trending-item">
+                <span class="rank">1</span>
+                <span class="game-name">Elden Ring</span>
+                <span class="category">RPG</span>
+            </div>
+            <div class="trending-item">
+                <span class="rank">2</span>
+                <span class="game-name">Counter Strike 2</span>
+                <span class="category">Shooter</span>
+            </div>
+            <div class="trending-item">
+                <span class="rank">3</span>
+                <span class="game-name">Apex Legends</span>
+                <span class="category">Battle Royale</span>
+            </div>
+            <div class="trending-item">
+                <span class="rank">4</span>
+                <span class="game-name">Hollow Knight: Silksong</span>
+                <span class="category">Metroidvania</span>
+            </div>
+            <div class="trending-item">
+                <span class="rank">5</span>
+                <span class="game-name">CupHead</span>
+                <span class="category">Plataformas</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+    <div class="container">
+        <h2>¿Listo para Explorar?</h2>
+        <p>Descubre todo lo que GameHub tiene para ofrecerte</p>
+        <div class="cta-buttons">
+            <a href="/services/" class="btn btn-primary">Nuestros Servicios</a>
+            <a href="/contact/" class="btn btn-secondary">Contáctanos</a>
         </div>
     </div>
 </section>

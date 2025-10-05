@@ -1,0 +1,108 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contáctanos - GameHub{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/pages/sections.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Contáctanos</h1>
+        <p>¿Tienes preguntas, sugerencias o quieres colaborar con nosotros?</p>
+    </div>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="contact-card">
+                <h2>Email</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Contacto General</strong>
+                        <p>contacto@gamehub.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Prensa y Medios</strong>
+                        <p>prensa@gamehub.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Colaboraciones</strong>
+                        <p>partner@gamehub.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REDES SOCIALES -->
+            <div class="contact-card">
+                <h2>Redes Sociales</h2>
+                <div class="social-links">
+                    <div class="social-item">
+                        <div class="social-info">
+                            <strong>Twitter</strong>
+                            <p>@GameHub</p>
+                        </div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-info">
+                            <strong>Instagram</strong>
+                            <p>@GameHub</p>
+                        </div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-info">
+                            <strong>Discord</strong>
+                            <p>GameHubCommunity</p>
+                        </div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-info">
+                            <strong>YouTube</strong>
+                            <p>GameHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLABORACIONES -->
+            <div class="contact-card">
+                <h2>Colaboraciones</h2>
+                <p>Si eres desarrollador o representas una empresa gaming, nos encantaría trabajar contigo.</p>
+                <div class="collaboration-types">
+                    <div class="collab-item">
+                        <h3>Desarrolladores</h3>
+                        <p>Reviews, cobertura de lanzamientos y promoción de tu juego.</p>
+                    </div>
+                    <div class="collab-item">
+                        <h3>Empresas</h3>
+                        <p>Partnerships, publicidad y contenido patrocinado.</p>
+                    </div>
+                    <div class="collab-item">
+                        <h3>Escritores</h3>
+                        <p>Únete a nuestro equipo editorial y comparte tu pasión por los juegos.</p>
+                    </div>
+                </div>
+                <a href="mailto:partnerships@gamehub.com" class="btn btn-primary">Contactar para Colaboración</a>
+            </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- CALL TO ACTION -->
+        <div class="contact-cta">
+            <h2>¿Tienes Algo Específico en Mente?</h2>
+            <p>No dudes en contactarnos para cualquier consulta o sugerencia</p>
+            <div class="cta-buttons">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
