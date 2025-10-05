@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Noticias — BlogGames{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'noticias/css/noticias.css' %}">
+{% endblock %}
+{% block content %}
+<div class="noticias-container">
+  <div class="noticias-header">
+    <h1>Comunidad</h1>
+  </div>
+
+  {% if comunidades %}
+    <ul class="noticias-list">
+        {% for comunidad in comunidades %}
+        <div>
+            <h2>{{ comunidad.titulo }}</h2>
+            <p>{{ comunidad.detalle }}</p>  <!-- ✅ Cambiado: detalle en lugar de descripcion -->
+            {% if comunidad.imagen %}
+                <img src="{{ comunidad.imagen.url }}" alt="{{ comunidad.titulo }}" width="200">  <!-- ✅ Cambiado: comunidad.titulo -->
+            {% endif %}
+            <p><small>Por: {{ comunidad.autor }} | {{ comunidad.created }}</small></p>
+        </div>
+        {% endfor %}
+    </ul>
+  {% else %}
+    <div class="no-noticias">
+      <p>No hay publicaciones en la comunidad aún.</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -21,6 +21,10 @@ from core import views as views_core
 from comunidad import views as views_comunidad
 from galeria import views as views_galeria
 from noticias import views as views_noticias
+from django.conf.urls.static import static
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +32,9 @@ urlpatterns = [
     path('about/',views_core.about,name="about"),
     path('services/',views_core.services,name="services"),
     path('contact/',views_core.contact,name="contact"),
-    # path('comunidad/',views_comunidad.comunidad,name="comunidad"),
+    path('comunidad/',views_comunidad.comunidad,name="comunidad"),
     path('galeria/', include('galeria.urls')),
     path('noticias/',views_noticias.noticias,name="noticias"),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
