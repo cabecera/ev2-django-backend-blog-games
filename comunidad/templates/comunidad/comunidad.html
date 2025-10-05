@@ -1,32 +1,40 @@
 {% extends "core/base.html" %}
 {% load static %}
-{% block title %}Noticias — BlogGames{% endblock %}
+{% block title %}Comunidad — BlogGames{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'noticias/css/noticias.css' %}">
+<link rel="stylesheet" href="{% static 'comunidad/css/comunidad.css' %}">
 {% endblock %}
+
 {% block content %}
-<div class="noticias-container">
-  <div class="noticias-header">
+<div class="comunidad-container">
+  <div class="comunidad-header">
     <h1>Comunidad</h1>
+    <p class="subtitulo">Un espacio donde los miembros comparten ideas, experiencias y noticias del mundo gamer.</p>
   </div>
 
   {% if comunidades %}
-    <ul class="noticias-list">
-        {% for comunidad in comunidades %}
-        <div>
-            <h2>{{ comunidad.titulo }}</h2>
-            <p>{{ comunidad.detalle }}</p>  <!-- ✅ Cambiado: detalle en lugar de descripcion -->
-            {% if comunidad.imagen %}
-                <img src="{{ comunidad.imagen.url }}" alt="{{ comunidad.titulo }}" width="200">  <!-- ✅ Cambiado: comunidad.titulo -->
-            {% endif %}
-            <p><small>Por: {{ comunidad.autor }} | {{ comunidad.created }}</small></p>
+    <div class="comunidad-list">
+      {% for comunidad in comunidades %}
+      <article class="comunidad-card">
+        {% if comunidad.imagen %}
+        <div class="comunidad-imagen">
+          <img src="{{ comunidad.imagen.url }}" alt="{{ comunidad.titulo }}">
         </div>
-        {% endfor %}
-    </ul>
+        {% endif %}
+        <div class="comunidad-contenido">
+          <h2 class="comunidad-titulo">{{ comunidad.titulo }}</h2>
+          <p class="comunidad-detalle">{{ comunidad.detalle }}</p>
+          <div class="comunidad-meta">
+            <small>Publicado por <strong>{{ comunidad.autor }}</strong> el {{ comunidad.created|date:"d M Y" }}</small>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   {% else %}
-    <div class="no-noticias">
-      <p>No hay publicaciones en la comunidad aún.</p>
+    <div class="no-comunidad">
+      <p>No hay publicaciones en la comunidad aún. ¡Sé el primero en compartir algo!</p>
     </div>
   {% endif %}
 </div>
