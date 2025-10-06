@@ -6,16 +6,15 @@
 <link rel="stylesheet" href="{% static 'noticias/css/noticias.css' %}">
 {% endblock %}
 
-
 {% block content %}
 <div class="noticias-container">
   <div class="noticias-header">
     <h1>Últimas Noticias</h1>
   </div>
 
-  {% if noticias %}
+  {% if page_obj %}
     <ul class="noticias-list">
-      {% for n in noticias %}
+      {% for n in page_obj %}
         <li class="noticia-item">
           <h2 class="noticia-titulo">{{ n.titulo }}</h2>
           <p class="noticia-detalle">{{ n.detalle }}</p>
@@ -26,6 +25,21 @@
         </li>
       {% endfor %}
     </ul>
+
+    <!-- Paginación -->
+    <div class="pagination">
+      {% if page_obj.has_previous %}
+        <a href="?page=1">Primera</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+      {% endif %}
+
+      <span>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Última</a>
+      {% endif %}
+    </div>
   {% else %}
     <div class="no-noticias">
       <p>No hay noticias aún.</p>
