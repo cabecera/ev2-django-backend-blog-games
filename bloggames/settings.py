@@ -23,10 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(56a_lt8t(mb(58%7c3%a8n_8hglm$m9vz4=zg*fj5bj3ep^5l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# Cambiar A False para ver el 404 perzonalizado
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+# Y corremos el servidor en modo estático: python manage.py runserver --insecure
+# url inexistente: http://127.0.0.1:8000/4
 
 # Application definition
 
@@ -119,7 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

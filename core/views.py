@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponseNotFound
 
 # Create your views here.
 def home(request):
@@ -12,3 +13,7 @@ def services(request):
 
 def contact(request):
     return render(request, 'core/contact.html')
+
+
+def custom_404(request, exception):
+    return render(request, 'core/404.html', status=404)
