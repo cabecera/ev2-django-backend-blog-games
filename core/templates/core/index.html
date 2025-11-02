@@ -15,9 +15,9 @@
         <h1>Bienvenido a GameHub</h1>
         <p>Tu destino definitivo para las últimas noticias, reviews y contenido sobre videojuegos</p>
         <div class="hero-buttons">
-            <a href="/galeria/" class="btn btn-primary">Ver Galería</a>
-            <a href="/noticias/" class="btn btn-secondary">Últimas Noticias</a>
-            <a href="/about/" class="btn btn-outline">Conócenos</a>
+            <a href="{% url 'galeria:galeria' %}" class="btn btn-primary">Ver Galería</a>
+            <a href="{% url 'noticias:noticias' %}" class="btn btn-secondary">Últimas Noticias</a>
+            <a href="{% url 'core:about' %}" class="btn btn-outline">Conócenos</a>
         </div>
     </div>
 </section>
@@ -30,12 +30,12 @@
             <div class="featured-card">
                 <h3>Elden Ring</h3>
                 <p>El RPG de mundo abierto que está revolucionando el género.</p>
-                <a href="/galeria/" class="btn btn-primary">Ver Detalles</a>
+                <a href="{% url 'galeria:galeria' %}" class="btn btn-primary">Ver Detalles</a>
             </div>
             <div class="featured-card">
                 <h3>Hollow Knight: Silksong</h3>
                 <p>La esperada secuela del indie más aclamado.</p>
-                <a href="/galeria/" class="btn btn-primary">Ver Detalles</a>
+                <a href="{% url 'galeria:galeria' %}" class="btn btn-primary">Ver Detalles</a>
             </div>
         </div>
     </div>
@@ -49,17 +49,17 @@
             <div class="news-card">
                 <h3>Nuevo Lanzamiento</h3>
                 <p>Descubre los últimos juegos que han llegado al mercado.</p>
-                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+                <a href="{% url 'noticias:noticias' %}" class="btn btn-outline">Leer Más</a>
             </div>
             <div class="news-card">
                 <h3>Actualizaciones Gaming</h3>
                 <p>Mantente al día con las últimas actualizaciones de tus juegos favoritos.</p>
-                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+                <a href="{% url 'noticias:noticias' %}" class="btn btn-outline">Leer Más</a>
             </div>
             <div class="news-card">
                 <h3>Eventos Esports</h3>
                 <p>Cobertura completa de torneos y competiciones gaming.</p>
-                <a href="/noticias/" class="btn btn-outline">Leer Más</a>
+                <a href="{% url 'noticias:noticias' %}" class="btn btn-outline">Leer Más</a>
             </div>
         </div>
     </div>
@@ -132,8 +132,8 @@
         <h2>¿Listo para Explorar?</h2>
         <p>Descubre todo lo que GameHub tiene para ofrecerte</p>
         <div class="cta-buttons">
-            <a href="/services/" class="btn btn-primary">Nuestros Servicios</a>
-            <a href="/contact/" class="btn btn-secondary">Contáctanos</a>
+            <a href="{% url 'core:services' %}" class="btn btn-primary">Nuestros Servicios</a>
+            <a href="{% url 'core:contact' %}" class="btn btn-secondary">Contáctanos</a>
         </div>
     </div>
 </section>

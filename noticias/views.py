@@ -4,12 +4,12 @@ from .models import Noticia, Autor, Categoria
 
 def noticias(request):
     lista_noticias = (
-        Noticia.objects.select_related('autor', 'categoria')
+        Noticia.objects.select_related('autor', 'categoria')  # Optimiza consultas
         .all()
     )
 
-    categoria_id = request.GET.get('categoria')
-    autor_id = request.GET.get('autor')
+    categoria_id = request.GET.get('categoria')  # Filtro 1: categoría
+    autor_id = request.GET.get('autor')  # Filtro 2: autor
 
     if categoria_id:
         lista_noticias = lista_noticias.filter(categoria_id=categoria_id)
@@ -19,7 +19,7 @@ def noticias(request):
 
     lista_noticias = lista_noticias.order_by('-created')
 
-    paginator = Paginator(lista_noticias, 5)
+    paginator = Paginator(lista_noticias, 5)  # Paginación: 5 por página
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 

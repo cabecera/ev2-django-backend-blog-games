@@ -20,8 +20,8 @@ class Noticia(models.Model):
     titulo = models.CharField(max_length=100)
     detalle = models.TextField()
 
-    autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="noticias")
-    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="noticias")
+    autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="noticias")  # Relación con Autor
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="noticias")  # Relación con Categoria
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

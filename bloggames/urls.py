@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),
+    path('', include('core.urls')),  # Cada app tiene su urls.py
     path('comunidad/', include('comunidad.urls')),
     path('galeria/', include('galeria.urls')),
     path('noticias/', include('noticias.urls')),
@@ -29,5 +29,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# Handlers
-handler404 = 'core.views.custom_404'
+handler404 = 'core.views.custom_404'  # 404 personalizado

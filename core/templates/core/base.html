@@ -20,16 +20,16 @@
     <!-- BARRA DE NAVEGACIÓN -->
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo">GameHub</a>
+            <a href="{% url 'core:home' %}" class="logo">GameHub</a>
             <ul class="nav-menu roboto-light">
-                <li class="nav-item"><a href="/">Inicio</a></li>
-                <li class="nav-item"><a href="/about/">¿Quiénes Somos?</a></li>
-                <li class="nav-item"><a href="/services/">Servicios</a></li>
-                <li class="nav-item"><a href="/galeria/">Galería</a></li>
-                <li class="nav-item"><a href="/noticias/">Noticias</a></li>
+                <li class="nav-item"><a href="{% url 'core:home' %}">Inicio</a></li>
+                <li class="nav-item"><a href="{% url 'core:about' %}">¿Quiénes Somos?</a></li>
+                <li class="nav-item"><a href="{% url 'core:services' %}">Servicios</a></li>
+                <li class="nav-item"><a href="{% url 'galeria:galeria' %}">Galería</a></li>
+                <li class="nav-item"><a href="{% url 'noticias:noticias' %}">Noticias</a></li>
                 <li class="nav-item"><a href="#">Reviews</a></li>
-                <li class="nav-item"><a href="/comunidad/">Comunidad</a></li>
-                <li class="nav-item"><a href="/contact/">Contacto</a></li>
+                <li class="nav-item"><a href="{% url 'comunidad:comunidad' %}">Comunidad</a></li>
+                <li class="nav-item"><a href="{% url 'core:contact' %}">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -57,21 +57,21 @@
 
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
-                <p><a href="/">Inicio</a></p>
-                <p><a href="/about/">¿Quiénes Somos?</a></p>
-                <p><a href="/services/">Servicios</a></p>
-                <p><a href="/galeria/">Galería</a></p>
-                <p><a href="/noticias/">Noticias</a></p>
+                <p><a href="{% url 'core:home' %}">Inicio</a></p>
+                <p><a href="{% url 'core:about' %}">¿Quiénes Somos?</a></p>
+                <p><a href="{% url 'core:services' %}">Servicios</a></p>
+                <p><a href="{% url 'galeria:galeria' %}">Galería</a></p>
+                <p><a href="{% url 'noticias:noticias' %}">Noticias</a></p>
                 <p><a href="#">Reviews</a></p>
-                <p><a href="/comunidad/">Contacto</a></p>
-                <p><a href="/contact/">Contacto</a></p>
+                <p><a href="{% url 'comunidad:comunidad' %}">Comunidad</a></p>
+                <p><a href="{% url 'core:contact' %}">Contacto</a></p>
             </div>
 
             <div class="footer-section">
                 <h3>Categorías</h3>
                 {% if categorias_noticias %}
                     {% for categoria in categorias_noticias|slice:":5" %}
-                        <p><a href="{% url 'noticias' %}?categoria={{ categoria.id }}">{{ categoria.nombre }}</a></p>
+                        <p><a href="{% url 'noticias:noticias' %}?categoria={{ categoria.id }}">{{ categoria.nombre }}</a></p>
                     {% endfor %}
                 {% else %}
                     <p><a href="#">PC Gaming</a></p>

@@ -13,7 +13,7 @@
   </div>
 
   <div class="filtros">
-    <form method="get" action="{% url 'noticias' %}">
+    <form method="get" action="{% url 'noticias:noticias' %}">
       <label for="categoria">Filtrar por categoría:</label>
       <select name="categoria" id="categoria">
         <option value="">Todas las categorías</option>
@@ -36,7 +36,7 @@
 
       <button type="submit">Filtrar</button>
       {% if categoria_selected or autor_selected %}
-        <a href="{% url 'noticias' %}" class="limpiar-filtros">Limpiar filtros</a>
+        <a href="{% url 'noticias:noticias' %}" class="limpiar-filtros">Limpiar filtros</a>
       {% endif %}
     </form>
   </div>

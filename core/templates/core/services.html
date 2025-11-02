@@ -31,7 +31,7 @@
                     <li>Eventos y conferencias</li>
                     <li>Noticias de la industria</li>
                 </ul>
-                <a href="/noticias/" class="btn btn-primary">Ver Noticias</a>
+                <a href="{% url 'noticias:noticias' %}" class="btn btn-primary">Ver Noticias</a>
             </div>
 
             <!-- REVIEWS Y ANÁLISIS -->
@@ -57,7 +57,7 @@
                     <li>Galería organizada por género</li>
                     <li>Contenido exclusivo</li>
                 </ul>
-                <a href="/galeria/" class="btn btn-primary">Ver Galería</a>
+                <a href="{% url 'galeria:galeria' %}" class="btn btn-primary">Ver Galería</a>
             </div>
 
             <!-- COMUNIDAD ACTIVA -->
@@ -70,7 +70,7 @@
                     <li>Eventos comunitarios</li>
                     <li>Redes sociales activas</li>
                 </ul>
-                <a href="/comunidad/" class="btn btn-primary">Unirse a la Comunidad</a>
+                <a href="{% url 'comunidad:comunidad' %}" class="btn btn-primary">Unirse a la Comunidad</a>
             </div>
 
 
@@ -84,8 +84,8 @@
             <h2>¿Listo para Comenzar?</h2>
             <p>Explora todo lo que GameHub tiene para ofrecerte</p>
             <div class="cta-buttons">
-                <a href="/" class="btn btn-primary">Ir al Inicio</a>
-                <a href="/contact/" class="btn btn-secondary">Contáctanos</a>
+                <a href="{% url 'core:home' %}" class="btn btn-primary">Ir al Inicio</a>
+                <a href="{% url 'core:contact' %}" class="btn btn-secondary">Contáctanos</a>
             </div>
         </div>
     </div>

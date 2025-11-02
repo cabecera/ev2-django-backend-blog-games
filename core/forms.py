@@ -3,7 +3,7 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column, Submit, HTML
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.Form):  # Formulario crispy-forms con Bootstrap 5
     nombre = forms.CharField(
         label='Nombre completo',
         max_length=100,
@@ -61,14 +61,14 @@ class ContactForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.helper = FormHelper()
+        self.helper = FormHelper()  # Configuración crispy-forms
         self.helper.form_method = 'post'
         self.helper.form_class = 'contact-form'
         self.helper.attrs = {'novalidate': ''}
 
-        self.helper.layout = Layout(
+        self.helper.layout = Layout(  # Layout responsivo Bootstrap 5
             Row(
-                Column('nombre', css_class='col-md-6 mb-3'),
+                Column('nombre', css_class='col-md-6 mb-3'),  # 2 columnas
                 Column('email', css_class='col-md-6 mb-3'),
             ),
             Row(
