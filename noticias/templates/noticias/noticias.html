@@ -12,6 +12,35 @@
     <h1>Últimas Noticias</h1>
   </div>
 
+  <div class="filtros">
+    <form method="get" action="{% url 'noticias' %}">
+      <label for="categoria">Filtrar por categoría:</label>
+      <select name="categoria" id="categoria">
+        <option value="">Todas las categorías</option>
+        {% for cat in categorias %}
+          <option value="{{ cat.id }}" {% if categoria_selected == cat.id %}selected{% endif %}>
+            {{ cat.nombre }}
+          </option>
+        {% endfor %}
+      </select>
+
+      <label for="autor">Filtrar por autor:</label>
+      <select name="autor" id="autor">
+        <option value="">Todos los autores</option>
+        {% for aut in autores %}
+          <option value="{{ aut.id }}" {% if autor_selected == aut.id %}selected{% endif %}>
+            {{ aut.nombre }}
+          </option>
+        {% endfor %}
+      </select>
+
+      <button type="submit">Filtrar</button>
+      {% if categoria_selected or autor_selected %}
+        <a href="{% url 'noticias' %}" class="limpiar-filtros">Limpiar filtros</a>
+      {% endif %}
+    </form>
+  </div>
+
   {% if page_obj %}
     <ul class="noticias-list">
       {% for n in page_obj %}
@@ -19,9 +48,21 @@
           <h2 class="noticia-titulo">{{ n.titulo }}</h2>
           <p class="noticia-detalle">{{ n.detalle }}</p>
           <div class="noticia-meta">
-            <p class="noticia-autor">{{ n.autor }}</p>
-            <p class="noticia-categoria">{{ n.categoria }}</p>
-            <p class="noticia-fecha">{{ n.created|date:"d/m/Y" }}</p>
+            <div class="meta-autor">
+              <p class="noticia-autor"><strong>Autor:</strong> {{ n.autor.nombre }}</p>
+              {% if n.autor.bio %}
+                <p class="noticia-autor-bio">{{ n.autor.bio|truncatewords:15 }}</p>
+              {% endif %}
+            </div>
+            <div class="meta-categoria">
+              <span class="badge-categoria">{{ n.categoria.nombre }}</span>
+            </div>
+            <div class="meta-fechas">
+              <p class="noticia-fecha"><strong>Creada:</strong> {{ n.created|date:"d/m/Y H:i" }}</p>
+              {% if n.updated != n.created %}
+                <p class="noticia-fecha-updated"><strong>Actualizada:</strong> {{ n.updated|date:"d/m/Y H:i" }}</p>
+              {% endif %}
+            </div>
           </div>
         </li>
       {% endfor %}
@@ -30,15 +71,15 @@
     <!-- Paginación -->
     <div class="pagination">
       {% if page_obj.has_previous %}
-        <a href="?page=1">Primera</a>
-        <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+        <a href="?page=1{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Primera</a>
+        <a href="?page={{ page_obj.previous_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Anterior</a>
       {% endif %}
 
       <span>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
 
       {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}">Última</a>
+        <a href="?page={{ page_obj.next_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Siguiente</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Última</a>
       {% endif %}
     </div>
   {% else %}

@@ -69,11 +69,15 @@
 
             <div class="footer-section">
                 <h3>Categorías</h3>
-                <p><a href="#">PC Gaming</a></p>
-                <p><a href="#">Consolas</a></p>
-                <p><a href="#">Mobile Gaming</a></p>
-                <p><a href="#">eSports</a></p>
-                <p><a href="#">Indie Games</a></p>
+                {% if categorias_noticias %}
+                    {% for categoria in categorias_noticias|slice:":5" %}
+                        <p><a href="{% url 'noticias' %}?categoria={{ categoria.id }}">{{ categoria.nombre }}</a></p>
+                    {% endfor %}
+                {% else %}
+                    <p><a href="#">PC Gaming</a></p>
+                    <p><a href="#">Consolas</a></p>
+                    <p><a href="#">Mobile Gaming</a></p>
+                {% endif %}
             </div>
 
             <div class="footer-section">
