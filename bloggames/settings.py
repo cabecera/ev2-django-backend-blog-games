@@ -25,9 +25,12 @@ SECRET_KEY = 'django-insecure-(56a_lt8t(mb(58%7c3%a8n_8hglm$m9vz4=zg*fj5bj3ep^5l
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # Cambiar A False para ver el 404 perzonalizado
+
 DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 # Y corremos el servidor en modo estático: python manage.py runserver --insecure
+#--insecure permite servir archivos estáticos cuando DEBUG=False
+
 # url inexistente: http://127.0.0.1:8000/4
 
 # Application definition

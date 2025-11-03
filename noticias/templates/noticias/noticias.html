@@ -7,85 +7,122 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- Contenedor principal de noticias -->
 <div class="noticias-container">
   <div class="noticias-header">
     <h1>Últimas Noticias</h1>
   </div>
 
+  <!-- Sección de filtros -->
   <div class="filtros">
+    <!-- Formulario de filtros con método GET -->
     <form method="get" action="{% url 'noticias:noticias' %}">
+
+      <!-- Filtro por categoría -->
       <label for="categoria">Filtrar por categoría:</label>
       <select name="categoria" id="categoria">
         <option value="">Todas las categorías</option>
+        <!-- Itera sobre todas las categorías disponibles -->
         {% for cat in categorias %}
-          <option value="{{ cat.id }}" {% if categoria_selected == cat.id %}selected{% endif %}>
-            {{ cat.nombre }}
-          </option>
+        <option value="{{ cat.id }}" {% if categoria_selected == cat.id %}selected{% endif %}>
+          {{ cat.nombre }}
+        </option>
         {% endfor %}
       </select>
 
+      <!-- Filtro por autor -->
       <label for="autor">Filtrar por autor:</label>
       <select name="autor" id="autor">
         <option value="">Todos los autores</option>
+        <!-- Itera sobre todos los autores disponibles -->
         {% for aut in autores %}
-          <option value="{{ aut.id }}" {% if autor_selected == aut.id %}selected{% endif %}>
-            {{ aut.nombre }}
-          </option>
+        <option value="{{ aut.id }}" {% if autor_selected == aut.id %}selected{% endif %}>
+          {{ aut.nombre }}
+        </option>
         {% endfor %}
       </select>
 
+      <!-- Botón para aplicar filtros -->
       <button type="submit">Filtrar</button>
+
+      <!-- Enlace para limpiar filtros (solo visible cuando hay filtros activos) -->
       {% if categoria_selected or autor_selected %}
-        <a href="{% url 'noticias:noticias' %}" class="limpiar-filtros">Limpiar filtros</a>
+      <a href="{% url 'noticias:noticias' %}" class="limpiar-filtros">Limpiar filtros</a>
       {% endif %}
     </form>
   </div>
 
   {% if page_obj %}
-    <ul class="noticias-list">
-      {% for n in page_obj %}
-        <li class="noticia-item">
-          <h2 class="noticia-titulo">{{ n.titulo }}</h2>
-          <p class="noticia-detalle">{{ n.detalle }}</p>
-          <div class="noticia-meta">
-            <div class="meta-autor">
-              <p class="noticia-autor"><strong>Autor:</strong> {{ n.autor.nombre }}</p>
-              {% if n.autor.bio %}
-                <p class="noticia-autor-bio">{{ n.autor.bio|truncatewords:15 }}</p>
-              {% endif %}
-            </div>
-            <div class="meta-categoria">
-              <span class="badge-categoria">{{ n.categoria.nombre }}</span>
-            </div>
-            <div class="meta-fechas">
-              <p class="noticia-fecha"><strong>Creada:</strong> {{ n.created|date:"d/m/Y H:i" }}</p>
-              {% if n.updated != n.created %}
-                <p class="noticia-fecha-updated"><strong>Actualizada:</strong> {{ n.updated|date:"d/m/Y H:i" }}</p>
-              {% endif %}
-            </div>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
+  <!-- Lista contenedora de noticias -->
+  <ul class="noticias-list">
+    <!-- Itera sobre cada noticia en el page_obj (resultados paginados) -->
+    {% for n in page_obj %}
+    <li class="noticia-item">
+      <!-- Título de la noticia -->
+      <h2 class="noticia-titulo">{{ n.titulo }}</h2>
 
-    <!-- Paginación -->
-    <div class="pagination">
-      {% if page_obj.has_previous %}
-        <a href="?page=1{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Primera</a>
-        <a href="?page={{ page_obj.previous_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Anterior</a>
-      {% endif %}
+      <!-- Contenido principal de la noticia -->
+      <p class="noticia-detalle">{{ n.detalle }}</p>
 
-      <span>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+      <!-- Sección de metadatos -->
+      <div class="noticia-meta">
+        <!-- Información del autor -->
+        <div class="meta-autor">
+          <p class="noticia-autor"><strong>Autor:</strong> {{ n.autor.nombre }}</p>
+          <!-- Muestra biografía del autor truncada a 15 palabras si existe -->
+          {% if n.autor.bio %}
+          <p class="noticia-autor-bio">{{ n.autor.bio|truncatewords:15 }}</p>
+          {% endif %}
+        </div>
 
-      {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Siguiente</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Última</a>
-      {% endif %}
-    </div>
+        <!-- Categoría de la noticia -->
+        <div class="meta-categoria">
+          <span class="badge-categoria">{{ n.categoria.nombre }}</span>
+        </div>
+
+        <!-- Fechas de creación y actualización -->
+        <div class="meta-fechas">
+          <p class="noticia-fecha"><strong>Creada:</strong> {{ n.created|date:"d/m/Y H:i" }}</p>
+          <!-- Muestra fecha de actualización solo si es diferente a la de creación -->
+          {% if n.updated != n.created %}
+          <p class="noticia-fecha-updated"><strong>Actualizada:</strong> {{ n.updated|date:"d/m/Y H:i" }}</p>
+          {% endif %}
+        </div>
+
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Paginación -->
+  <div class="pagination">
+    {% if page_obj.has_previous %}
+    <!-- Enlace a la primera página manteniendo filtros -->
+    <a
+      href="?page=1{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Primera</a>
+
+    <!-- Enlace a la página anterior manteniendo filtros -->
+    <a
+      href="?page={{ page_obj.previous_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Anterior</a>
+    {% endif %}
+    <!-- Indicador de página actual y total -->
+    <span>Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+    {% if page_obj.has_next %}
+    <!-- Enlace a la siguiente página manteniendo filtros -->
+    <a
+      href="?page={{ page_obj.next_page_number }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Siguiente</a>
+
+    <!-- Enlace a la última página manteniendo filtros -->
+    <a
+      href="?page={{ page_obj.paginator.num_pages }}{% if categoria_selected %}&categoria={{ categoria_selected }}{% endif %}{% if autor_selected %}&autor={{ autor_selected }}{% endif %}">Última</a>
+    {% endif %}
+  </div>
   {% else %}
-    <div class="no-noticias">
-      <p>No hay noticias aún.</p>
-    </div>
+  <!-- Mensaje cuando no hay resultados -->
+  <div class="no-noticias">
+    <p>No hay noticias aún.</p>
+  </div>
   {% endif %}
 </div>
 {% endblock %}
