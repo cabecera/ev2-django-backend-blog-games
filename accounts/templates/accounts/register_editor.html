@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Registro Editor</title></head>
+<body>
+  <h1>Registro - Editor</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarme como Editor</button>
+  </form>
+</body>
+</html>

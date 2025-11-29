@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Productos desde la API</h1>
+
+{% if products %}
+    <ul>
+        {% for p in products %}
+        <li>
+            <strong>{{ p.title }}</strong> - {{ p.description }} - ${{ p.price }}
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay productos disponibles.</p>
+{% endif %}
+
+{% endblock %}

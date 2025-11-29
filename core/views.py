@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseNotFound
+from django.core.mail import send_mail
 from .forms import ContactForm
+import requests
 
 # Vista para la página de inicio
 def home(request):
@@ -14,25 +16,54 @@ def about(request):
 def services(request):
     return render(request, 'core/services.html')
 
-# Vista para la página de contacto con formulario
+# Vista para la página de contacto con formulario y envío a Mailtrap
 def contact(request):
-    # Crea instancia vacía del formulario (para GET)
     form = ContactForm()
 
-    # Maneja envío del formulario (método POST)
     if request.method == 'POST':
-        # Crea formulario con datos enviados
         form = ContactForm(request.POST)
-        # Valida los datos del formulario
         if form.is_valid():
-            # SOLO DISEÑO: aquí procesará el envío de los datos
-            # Ej: enviar email, guardar en base de datos, etc.
-            pass
 
-    # Renderiza template con el formulario (vacío o con errores)
+            nombre = form.cleaned_data['nombre']
+            email = form.cleaned_data['email']
+            asunto = form.cleaned_data['asunto']
+            mensaje = form.cleaned_data['mensaje']
+            tipo = form.cleaned_data['tipo_consulta'] or "No especificado"
+
+            cuerpo = f"""
+Nuevo mensaje de contacto desde GameHub:
+
+Nombre: {nombre}
+Correo: {email}
+Asunto: {asunto}
+Tipo de consulta: {tipo}
+
+Mensaje:
+{mensaje}
+"""
+
+            # Enviar correo a Mailtrap
+            send_mail(
+                subject=f"[GameHub] {asunto}",
+                message=cuerpo,
+                from_email="test@example.com",  # No importa, Mailtrap lo recibe igual
+                recipient_list=["test@example.com"],  # Se queda en Mailtrap
+                fail_silently=False,
+            )
+
+            return render(request, 'core/contact_success.html')
+
     return render(request, 'core/contact.html', {'form': form})
 
-# Manejador personalizado para errores 404 (Página no encontrada)
+# Vista personalizada 404
 def custom_404(request, exception):
-    # Renderiza template 404 personalizado con estado HTTP 404
     return render(request, 'core/404.html', status=404)
+
+def api_consumer_products(request):
+    try:
+        response = requests.get('http://127.0.0.1:8000/api/products/')
+        products = response.json()
+    except:
+        products = []
+
+    return render(request, 'core/api_consumer_products.html', {'products': products})
