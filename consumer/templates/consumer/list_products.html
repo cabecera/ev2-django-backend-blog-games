@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Productos API</title></head>
+<body>
+  <h1>Productos (desde API)</h1>
+  <div id="products">Cargando...</div>
+
+  <script>
+    fetch('/api/products/')
+      .then(r => r.json())
+      .then(data => {
+        const c = document.getElementById('products');
+        c.innerHTML = '';
+        if (!Array.isArray(data) || data.length === 0) {
+          c.innerText = 'No hay productos';
+          return;
+        }
+        data.forEach(p => {
+          const el = document.createElement('div');
+          el.innerHTML = `<h3>${p.name} — $${p.price}</h3>
+                          <p>${p.description}</p>
+                          <p>Stock: ${p.stock} — Disponible: ${p.available}</p>`;
+          c.appendChild(el);
+        });
+      })
+      .catch(err => {
+        document.getElementById('products').innerText = 'Error: ' + err;
+      });
+  </script>
+</body>
+</html>

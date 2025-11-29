@@ -25,6 +25,10 @@ urlpatterns = [
     path('comunidad/', include('comunidad.urls')),
     path('galeria/', include('galeria.urls')),
     path('noticias/', include('noticias.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('contact/', include('contact.urls')),
+    path('api/', include('api_app.urls')),
+    path('', include('consumer.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

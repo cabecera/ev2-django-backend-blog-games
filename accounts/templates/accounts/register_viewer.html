@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Registro Viewer</title></head>
+<body>
+  <h1>Registro - Viewer</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarme como Viewer</button>
+  </form>
+</body>
+</html>
