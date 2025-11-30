@@ -118,3 +118,28 @@ form4 = ContactForm(request.POST, files=request.FILES) # Con archivos
 ```
 
 Este __init__ extiende el formulario base de Django para agregar la configuración de Crispy Forms, manteniendo toda la funcionalidad original.
+
+
+
+
+##############
+
+thunder client
+
+
+### EJEMPLO
+
+POST http://127.0.0.1:8000/api/products/create/
+
+{
+  "name": "PS5",
+  "description": "Consola Sony",
+  "price": 550000,
+  "stock": 10
+}
+
+
+
+GET http://127.0.0.1:8000/api/products/
+
+(dar formato al texto)

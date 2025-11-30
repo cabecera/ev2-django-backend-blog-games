@@ -1,0 +1,122 @@
+[1mdiff --git a/accounts/__pycache__/__init__.cpython-312.pyc b/accounts/__pycache__/__init__.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex f98e40b..0000000[m
+Binary files a/accounts/__pycache__/__init__.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/admin.cpython-312.pyc b/accounts/__pycache__/admin.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 9f7e2b0..0000000[m
+Binary files a/accounts/__pycache__/admin.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/apps.cpython-312.pyc b/accounts/__pycache__/apps.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 8b6145f..0000000[m
+Binary files a/accounts/__pycache__/apps.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/forms.cpython-312.pyc b/accounts/__pycache__/forms.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex cac4fde..0000000[m
+Binary files a/accounts/__pycache__/forms.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/models.cpython-312.pyc b/accounts/__pycache__/models.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex e8600e2..0000000[m
+Binary files a/accounts/__pycache__/models.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/signals.cpython-312.pyc b/accounts/__pycache__/signals.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex b89d2ee..0000000[m
+Binary files a/accounts/__pycache__/signals.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/urls.cpython-312.pyc b/accounts/__pycache__/urls.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 4ba1a9e..0000000[m
+Binary files a/accounts/__pycache__/urls.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/accounts/__pycache__/views.cpython-312.pyc b/accounts/__pycache__/views.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex eab328d..0000000[m
+Binary files a/accounts/__pycache__/views.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/__init__.cpython-312.pyc b/api_app/__pycache__/__init__.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex ca0c702..0000000[m
+Binary files a/api_app/__pycache__/__init__.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/admin.cpython-312.pyc b/api_app/__pycache__/admin.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex de75d1e..0000000[m
+Binary files a/api_app/__pycache__/admin.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/apps.cpython-312.pyc b/api_app/__pycache__/apps.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex fa67c5c..0000000[m
+Binary files a/api_app/__pycache__/apps.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/models.cpython-312.pyc b/api_app/__pycache__/models.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex b6f1806..0000000[m
+Binary files a/api_app/__pycache__/models.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/urls.cpython-312.pyc b/api_app/__pycache__/urls.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 1880ee2..0000000[m
+Binary files a/api_app/__pycache__/urls.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/api_app/__pycache__/views.cpython-312.pyc b/api_app/__pycache__/views.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 5f448c4..0000000[m
+Binary files a/api_app/__pycache__/views.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/bloggames/__pycache__/__init__.cpython-312.pyc b/bloggames/__pycache__/__init__.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 172b063..0000000[m
+Binary files a/bloggames/__pycache__/__init__.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/bloggames/__pycache__/__init__.cpython-313.pyc b/bloggames/__pycache__/__init__.cpython-313.pyc[m
+[1mindex 6350efd..ef1e956 100644[m
+Binary files a/bloggames/__pycache__/__init__.cpython-313.pyc and b/bloggames/__pycache__/__init__.cpython-313.pyc differ
+[1mdiff --git a/bloggames/__pycache__/settings.cpython-312.pyc b/bloggames/__pycache__/settings.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex d95b765..0000000[m
+Binary files a/bloggames/__pycache__/settings.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/bloggames/__pycache__/settings.cpython-313.pyc b/bloggames/__pycache__/settings.cpython-313.pyc[m
+[1mindex e9e6085..24cf4f7 100644[m
+Binary files a/bloggames/__pycache__/settings.cpython-313.pyc and b/bloggames/__pycache__/settings.cpython-313.pyc differ
+[1mdiff --git a/bloggames/__pycache__/urls.cpython-312.pyc b/bloggames/__pycache__/urls.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex c9f0529..0000000[m
+Binary files a/bloggames/__pycache__/urls.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/bloggames/__pycache__/urls.cpython-313.pyc b/bloggames/__pycache__/urls.cpython-313.pyc[m
+[1mindex 108a50d..757f3d5 100644[m
+Binary files a/bloggames/__pycache__/urls.cpython-313.pyc and b/bloggames/__pycache__/urls.cpython-313.pyc differ
+[1mdiff --git a/bloggames/__pycache__/wsgi.cpython-312.pyc b/bloggames/__pycache__/wsgi.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 62bfbc2..0000000[m
+Binary files a/bloggames/__pycache__/wsgi.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/bloggames/__pycache__/wsgi.cpython-313.pyc b/bloggames/__pycache__/wsgi.cpython-313.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 0558350..0000000[m
+Binary files a/bloggames/__pycache__/wsgi.cpython-313.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/__init__.cpython-312.pyc b/comunidad/__pycache__/__init__.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 3d45d27..0000000[m
+Binary files a/comunidad/__pycache__/__init__.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/__init__.cpython-313.pyc b/comunidad/__pycache__/__init__.cpython-313.pyc[m
+[1mindex 98d0b12..1779753 100644[m
+Binary files a/comunidad/__pycache__/__init__.cpython-313.pyc and b/comunidad/__pycache__/__init__.cpython-313.pyc differ
+[1mdiff --git a/comunidad/__pycache__/admin.cpython-312.pyc b/comunidad/__pycache__/admin.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex edfe6f2..0000000[m
+Binary files a/comunidad/__pycache__/admin.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/admin.cpython-313.pyc b/comunidad/__pycache__/admin.cpython-313.pyc[m
+[1mindex 39f4cee..a26d67e 100644[m
+Binary files a/comunidad/__pycache__/admin.cpython-313.pyc and b/comunidad/__pycache__/admin.cpython-313.pyc differ
+[1mdiff --git a/comunidad/__pycache__/apps.cpython-312.pyc b/comunidad/__pycache__/apps.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex feea92c..0000000[m
+Binary files a/comunidad/__pycache__/apps.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/apps.cpython-313.pyc b/comunidad/__pycache__/apps.cpython-313.pyc[m
+[1mindex 299b6bb..16f68f7 100644[m
+Binary files a/comunidad/__pycache__/apps.cpython-313.pyc and b/comunidad/__pycache__/apps.cpython-313.pyc differ
+[1mdiff --git a/comunidad/__pycache__/models.cpython-312.pyc b/comunidad/__pycache__/models.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex fe9c61d..0000000[m
+Binary files a/comunidad/__pycache__/models.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/models.cpython-313.pyc b/comunidad/__pycache__/models.cpython-313.pyc[m
+[1mindex 891a1b8..dacb90b 100644[m
+Binary files a/comunidad/__pycache__/models.cpython-313.pyc and b/comunidad/__pycache__/models.cpython-313.pyc differ
+[1mdiff --git a/comunidad/__pycache__/urls.cpython-312.pyc b/comunidad/__pycache__/urls.cpython-312.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex 6349864..0000000[m
+Binary files a/comunidad/__pycache__/urls.cpython-312.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/urls.cpython-313.pyc b/comunidad/__pycache__/urls.cpython-313.pyc[m
+[1mdeleted file mode 100644[m
+[1mindex ae31414..0000000[m
+Binary files a/comunidad/__pycache__/urls.cpython-313.pyc and /dev/null differ
+[1mdiff --git a/comunidad/__pycache__/views.cpyt
