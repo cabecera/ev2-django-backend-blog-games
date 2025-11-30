@@ -144,6 +144,11 @@ POST http://127.0.0.1:8000/api/products/create/
 
 
 
+
+
 GET http://127.0.0.1:8000/api/products/
 
 (dar formato al texto)
+
+ con diseño:
+http://127.0.0.1:8000/api/products/html/

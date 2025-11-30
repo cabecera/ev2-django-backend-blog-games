@@ -2,6 +2,7 @@ import json
 from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from .models import Product
+from django.shortcuts import render
 
 def product_list_get(request):
     if request.method != 'GET':
@@ -32,3 +33,8 @@ def product_create_post(request):
 
     except (KeyError, ValueError, json.JSONDecodeError) as e:
         return JsonResponse({'error': str(e)}, status=400)
+
+
+
+def list_products_view(request):
+    return render(request, 'api_app/list_products.html')

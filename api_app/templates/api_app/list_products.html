@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Productos API - GameHub{% endblock %}
+
+{% block extra_css %}
+<style>
+    .product-card {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .product-price {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="roboto-bold">Productos (desde API)</h1>
+
+<div id="products" class="roboto-light">
+    Cargando...
+</div>
+
+<script>
+    fetch('/api/products/')
+        .then(r => r.json())
+        .then(data => {
+            const c = document.getElementById('products');
+            c.innerHTML = '';
+
+            if (!Array.isArray(data) || data.length === 0) {
+                c.innerText = 'No hay productos';
+                return;
+            }
+
+            data.forEach(p => {
+                const el = document.createElement('div');
+                el.classList.add('product-card');
+
+                el.innerHTML = `
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-price">$${p.price}</div>
+
+                    <p>${p.description}</p>
+                    <p><strong>Stock:</strong> ${p.stock}</p>
+                    <p><strong>Disponible:</strong> ${p.available ? 'Sí' : 'No'}</p>
+                `;
+
+                c.appendChild(el);
+            });
+        })
+        .catch(err => {
+            document.getElementById('products').innerText = 'Error: ' + err;
+        });
+</script>
+
+{% endblock %}
