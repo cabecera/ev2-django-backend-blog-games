@@ -123,11 +123,15 @@ Este __init__ extiende el formulario base de Django para agregar la configuraci√
 
 
 ##############
+instalar todo:
+
+requirements.txt
+pip install requests
 
 thunder client
 
 
-### EJEMPLO
+### EJEMPLO PARA API
 
 POST http://127.0.0.1:8000/api/products/create/
 
